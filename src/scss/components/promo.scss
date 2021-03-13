@@ -1,0 +1,62 @@
+
+.promo{
+  @include bg-black;
+  min-height: 600px;
+  padding-top: 50px;
+  &__carousel{
+    width: 100%;
+    height: 450px;
+    background: $dark-bg;
+  }
+}
+.icon{
+  stroke: chartreuse;
+}
+.carousel{
+  position: relative;
+  padding: 0 100px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 4;
+  &::before{
+    @include arrow;
+    left: 20px;
+    background-image: url('@/img/slider/arrow_left.svg');
+  }
+  &::after{
+    @include arrow;
+    right: 20px;
+    background-image:url('@/img/slider/arrow_right.svg');
+
+  }
+  &__img-content {
+    width: 450px;
+  }
+  &__text-content{
+    padding-top: 30px;
+  }
+  &__title{
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 400;
+    margin-top: 40px;
+    &--big{
+      font-size: 100px;
+      line-height: 100px;
+    }
+    span{
+      font-size: 80px;
+      line-height: 0;
+    }
+  }
+  &__descr{
+    color: rgba($color: #fff, $alpha: 0.5);
+    font-family: Open Sans, 'sans-serif';
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  &__button{
+    @include button;
+    margin-top: 50px;
+  }
+}

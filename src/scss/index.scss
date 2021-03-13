@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@400;700&display=swap');
+@import './core/variables.scss';
+@import './core/mixines';
+@import './components/header.scss';
+@import './components/promo';
+@import './components/tiles';
+@import './components/rings';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Playfir Display;
+}
+
+.container{
+  margin: 0 auto;
+  width: 1170px;
+}

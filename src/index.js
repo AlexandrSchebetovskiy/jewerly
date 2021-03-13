@@ -1,3 +1,2 @@
-
-import './module'
-console.log('123')
+import './scss/index.scss'
+console.log('fuck you too')
