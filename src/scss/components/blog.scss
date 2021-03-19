@@ -1,0 +1,67 @@
+.blog{
+  @include bg-black;
+  min-height: 420px;
+  &__wrap{
+    margin-top: 140px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 28px;
+  }
+}
+.article{
+  width: 250px;
+  position: relative;
+  z-index: 2;
+  &__date{
+    position: absolute;
+    left: 0;
+    top: -100px;
+    color: $dark-bg;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+  }
+  &__day{
+    font-size: 150px;
+    font-weight: 900;
+  }
+  &__month{
+    font-size: 22px;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+  &__content{
+    position: relative;
+    z-index: 10;
+    color: #fff;
+  }
+  &__title{
+    font-weight: bold;
+    font-size: 25px;
+  }
+  &__descr{
+    font-family: open sans, sans-serif;
+    margin-top: 10px;
+   opacity: .5; 
+  }
+  &__button{
+    margin-top: 10px;
+    border:none;
+    color: $primary-color;
+    background-image: transaparent;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: #000;
+    text-transform: capitalize;
+    transition: 0.2s;
+    &:hover{
+      color:#fff;
+    }
+  }
+}

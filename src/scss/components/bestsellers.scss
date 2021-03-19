@@ -1,0 +1,75 @@
+.bestsellers{
+  min-height: 450px;
+  @include bg-black;
+  &__title{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 28px;
+  }
+  &__wrap{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+}
+
+.card{
+  border: 1px solid #fff;
+  position: relative;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  transition: 0.2s;
+  &__img{
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    img{
+      max-width: 100%;
+      z-index: 1;
+    }
+  }
+  &__content{
+    height: 100px;
+    width: 100%;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  &__title{
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  &__price{
+    color: $primary-color;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  &__button{
+    border: none;
+    padding: 5px 20px;
+    color: #fff;
+    background-color: $primary-color;
+    text-transform: capitalize;
+  }
+}
+.card:hover{
+  height: 350px;
+  border-color: $primary-color;
+  .card__content{
+    opacity: 1; 
+    visibility: visible;
+    // display: block;
+  }
+}
