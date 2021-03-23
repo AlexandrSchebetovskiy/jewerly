@@ -2,10 +2,8 @@
   min-height: 450px;
   @include bg-black;
   &__title{
+    @include title;
     color: #fff;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 28px;
   }
   &__wrap{
     display: flex;
