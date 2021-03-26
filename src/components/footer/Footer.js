@@ -3,6 +3,13 @@ import {AppComponent} from '@core/AppComponent'
 export class Footer extends AppComponent {
   static className ='footer'
   static tagName = 'footer'
+
+  constructor($root) {
+    super($root, {
+      name: 'Footer',
+      listeners: ['click']
+    })
+  }
   toHTML() {
     return `
     <div class="container">
@@ -32,5 +39,9 @@ export class Footer extends AppComponent {
       </div>
     </div>
     `
+  }
+  onClick(event) {
+    event.preventDefault()
+    console.log(event.target)
   }
 }

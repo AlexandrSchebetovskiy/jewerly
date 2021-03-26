@@ -7,7 +7,7 @@ export class Header extends AppComponent {
   constructor($root) {
     super($root, {
       name: 'Header',
-      listeners: ['click', 'input']
+      listeners: ['click']
     })
   }
 
