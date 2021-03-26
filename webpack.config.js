@@ -44,7 +44,7 @@ module.exports = {
       '@core': path.resolve(__dirname, 'src/core'),
     },
   },
-  devtool: isDev ? 'source-map' : false,
+  devtool: isDev ? 'source-map' : 'source-map',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     port: 3000,
