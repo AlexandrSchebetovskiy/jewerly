@@ -19,7 +19,6 @@ export class Home {
       $root.append($el)
       return component
     })
-    console.log($root.$el);
     return $root
   }
 

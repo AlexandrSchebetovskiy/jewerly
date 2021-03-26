@@ -7,7 +7,7 @@ export class Header extends AppComponent {
   constructor($root) {
     super($root, {
       name: 'Header',
-      listeners: ['click']
+      listeners: ['click', 'input']
     })
   }
 
@@ -37,6 +37,7 @@ export class Header extends AppComponent {
     `
   }
   onClick(event) {
+    console.log(this.$root);
     console.log('Header: onClick', event)
   }
 }
