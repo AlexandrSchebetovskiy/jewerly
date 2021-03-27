@@ -7,9 +7,10 @@ export class Tiles extends AppComponent {
     return `
     <div class="container">
       <div class="tiles__wrap">
+          
           <a id="watches" href="#" class="tile">
-            <h3 class="tile__title">watches</h3>
-            <span class="tile__descr">shop watches</span>
+          <h3 class="tile__title">watches</h3>
+          <span class="tile__descr">shop watches</span>
           </a>
           <a id="necklaces" href="#" class="tile">
             <h3 class="tile__title">pedants<br>necklaces</h3>
