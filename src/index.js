@@ -7,10 +7,17 @@
 // import {Footer} from '@/components/footer/Footer'
 
 // import {Home} from '@/components/home/Home'
-import {Router} from './core/route/Router'
+import {Router} from '@core/route/Router'
+import {HomePage} from '@/pages/HomePage'
+import {AboutPage} from '@/pages/AboutPage'
 import './scss/index.scss'
-new Router('#app', {
+import {BlogPage} from '@/pages/BlogPage'
 
+
+new Router('#app', {
+  home: HomePage,
+  about: AboutPage,
+  blog: BlogPage,
 })
 
 // const app = new Home('#app', {

@@ -19,8 +19,11 @@ export class Router {
     window.removeEventListener('hashchange', this.changePageHandler)
   }
   changePageHandler() {
+    const Page = this.routes.blog
+    const page = new Page()
     console.log(ActiveRoute.path)
     console.log(ActiveRoute.param)
-    this.$placeholder.html(`<h1>${ActiveRoute.path}</h1>`)
+    this.$placeholder.append(page.getRoot())
+    page.afterRender()
   }
 }

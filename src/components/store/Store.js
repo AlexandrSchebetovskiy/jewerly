@@ -1,15 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jewerly</title>
-  <link rel="shortcut icon" href="favicon.ico">
-</head>
-<body>
-  
-<section class="store">
+import {AppComponent} from '@core/AppComponent'
+
+export class Store extends AppComponent {
+  static className ='store'
+  static tagName = 'section'
+
+  constructor($root) {
+    super($root, {
+      name: 'Store'
+    })
+  }
+
+  toHTML() {
+    return `
     <div class="container">
       <h2 class="store__title">store</h2>
       <ul class="store__nav">
@@ -53,7 +55,6 @@
         </div>
     </div>
     </div>>
-</section>
-
-</body>
-</html>
+    `
+  }
+}

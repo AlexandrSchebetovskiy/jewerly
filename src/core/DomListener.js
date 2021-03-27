@@ -1,4 +1,4 @@
-import {getMethod} from './utils'
+import {getMethod} from '@core/utils'
 
 export class DomListener {
   constructor($root, listeners = []) {
