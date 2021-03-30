@@ -19,12 +19,12 @@ export class Header extends AppComponent {
         </div>
         <nav class="header__nav">
           <ul class="menu">
-            <li class="menu__item"><a href="#">home</a></li> 
-            <li class="menu__item"><a href="#">about us</a></li>
-            <li class="menu__item"><a href="#">store</a></li>
-            <li class="menu__item"><a href="#">galerry</a></li>
-            <li class="menu__item"><a href="#">blog</a></li>
-            <li class="menu__item"><a href="#">contacts</a></li>
+            <li class="menu__item"><a href="#home">home</a></li> 
+            <li class="menu__item"><a href="#about">about us</a></li>
+            <li class="menu__item"><a href="#store">store</a></li>
+            <li class="menu__item"><a href="#gallery">galerry</a></li>
+            <li class="menu__item"><a href="#blog">blog</a></li>
+            <li class="menu__item"><a href="#contacts">contacts</a></li>
           </ul>
         </nav>
       </div>

@@ -5,8 +5,7 @@ export class Blog extends AppComponent {
 
   constructor($root) {
     super($root, {
-      name: 'Header',
-      listeners: ['click']
+      name: 'Header'
     })
   }
 

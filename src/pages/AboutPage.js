@@ -12,18 +12,18 @@ import {Footer} from '@/components/footer/Footer'
 
 export class AboutPage extends Page {
   getRoot() {
-    this.home = new AboutPageComponent({
+    this.about = new AboutPageComponent({
       components: [
         Header, About, Partners, Memories, History, Instagramm, Footer
       ]
     })
-    return this.home.getRoot()
+    return this.about.getRoot()
   }
   afterRender() {
     console.log('afterRender');
-    this.home.init()
+    this.about.init()
   }
   destroy() {
-    this.home.destroy()
+    this.about.destroy()
   }
 }
