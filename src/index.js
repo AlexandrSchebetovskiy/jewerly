@@ -7,11 +7,11 @@
 // import {Footer} from '@/components/footer/Footer'
 
 // import {Home} from '@/components/home/Home'
-import {Router} from '@core/route/Router'
-import {HomePage} from '@/pages/HomePage'
-import {AboutPage} from '@/pages/AboutPage'
+import {Router} from './core/route/Router'
+import {HomePage} from './/pages/HomePage'
+import {AboutPage} from './/pages/AboutPage'
 import './scss/index.scss'
-import {BlogPage} from '@/pages/BlogPage'
+import {BlogPage} from './/pages/BlogPage'
 
 
 new Router('#app', {

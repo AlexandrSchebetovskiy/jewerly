@@ -8,10 +8,7 @@ import {Partners} from '@/components/partners/Partners'
 import {Memories} from '@/components/memories/Memories'
 import {History} from '@/components/history/History'
 import {Instagramm} from '@/components/instagramm/Instagramm'
-
-
 import {Footer} from '@/components/footer/Footer'
-
 
 export class AboutPage extends Page {
   getRoot() {
