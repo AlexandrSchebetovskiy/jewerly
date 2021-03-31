@@ -11,7 +11,8 @@ import {Instagramm} from '@/components/instagramm/Instagramm'
 import {Footer} from '@/components/footer/Footer'
 
 export class AboutPage extends Page {
-  constructor(data) {
+  static url = 'server/data.json'
+  constructor(data = {}) {
     super()
     this.data = data
   }
@@ -20,7 +21,7 @@ export class AboutPage extends Page {
       components: [
         Header, About, Partners, Memories, History, Instagramm, Footer
       ],
-      data: this.data.about
+      data: this.data
     })
     console.log('aboutpage', this.data);
     return this.about.getRoot()

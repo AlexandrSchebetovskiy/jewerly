@@ -10,9 +10,15 @@ import {Footer} from '@/components/footer/Footer'
 import {HomePageComponent} from '@/components/PageComponents/HomePageComponent'
 
 export class HomePage extends Page {
+  static url = 'server/Home.json'
+  constructor(data = {}) {
+    super()
+    this.data = data
+  }
   getRoot() {
     this.home = new HomePageComponent({
-      components: [Header, Promo, Tiles, Bestsellers, GetCard, Posts, Footer]
+      components: [Header, Promo, Tiles, Bestsellers, GetCard, Posts, Footer],
+      data: this.data
     })
     return this.home.getRoot()
   }

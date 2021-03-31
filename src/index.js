@@ -10,19 +10,15 @@ import {StorePage} from './pages/StorePage'
 import {GalleryPage} from './pages/GalleryPage'
 import {NotFound} from './pages/NotFound'
 
-fetch('server/data.json')
-    .then(res => res.json())
-    .then(data => {
-      console.log('index', data);
-      new Router('#app', data, {
-        home: HomePage,
-        about: AboutPage,
-        blog: BlogPage,
-        contacts: ContactsPage,
-        store: StorePage,
-        gallery: GalleryPage,
-        notFound: NotFound
-      })
-    })
+
+new Router('#app', {
+  home: HomePage,
+  about: AboutPage,
+  blog: BlogPage,
+  contacts: ContactsPage,
+  store: StorePage,
+  gallery: GalleryPage,
+  notFound: NotFound
+})
 
 
