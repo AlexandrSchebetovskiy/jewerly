@@ -1,6 +1,6 @@
 import {PageComponent} from '@core/PageComponent'
 export class AboutPageComponent extends PageComponent {
   constructor(options) {
-    super(options.components, 'AboutPage')
+    super(options.components, 'AboutPage', options.data)
   }
 }

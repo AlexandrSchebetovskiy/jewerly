@@ -1,4 +1,3 @@
-
 import {$} from '@core/dom'
 import {ActiveRoute} from './ActiveRoute'
 export class Router {
@@ -10,6 +9,7 @@ export class Router {
     this.routes = routes
     this.page = null
     this.changePageHandler = this.changePageHandler.bind(this)
+    // this.data = data
     this.init()
   }
   init() {
@@ -17,20 +17,30 @@ export class Router {
     this.changePageHandler()
   }
   changePageHandler() {
-    console.log('this', this);
     if (this.page) {
       this.page.destroy()
     }
     this.$palceholder.clear()
 
-    console.log(this.getRoute())
+
     const Page = this.getRoute()
+    const Url = Page.url
+    console.log(Url);
+    if (!Url) {
+      this.page = new Page()
+      this.$palceholder.append(this.page.getRoot())
+      this.page.afterRender()
+    } else {
+      fetch(Url)
+          .then(res => res.json())
+          .then(data => {
+            console.log('router', data)
+            this.page = new Page(data)
 
-    this.page = new Page()
-
-    this.$palceholder.append(this.page.getRoot())
-
-    this.page.afterRender()
+            this.$palceholder.append(this.page.getRoot())
+            this.page.afterRender()
+          })
+    }
   }
   destroy() {
     window.removeEventListener('hashchange', this.changePageHandler)

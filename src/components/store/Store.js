@@ -1,13 +1,15 @@
 import {AppComponent} from '@core/AppComponent'
+import {getStoreTemplate} from './store.template'
 
 export class Store extends AppComponent {
   static className ='store'
   static tagName = 'section'
 
-  constructor($root) {
+  constructor($root, store) {
     super($root, {
       name: 'Store'
     })
+    this.store = store
   }
 
   toHTML() {
@@ -23,37 +25,8 @@ export class Store extends AppComponent {
         <li class="store__nav-item">braceletes</li>
       </ul>
       <div class="store__grid">
-        <div class="store__item" >
-          <div class="store__img">
-            <img src="img/store/product-1.jpg" alt="">
-          </div>
-          <div class="store__content">
-            <h3 class="store__title">Silver Earing</h3>
-            <div class="store__price">120.00 $</div>
-            <button class="store__button">buy now</button>
-          </div>
-        </div>
-        <div class="store__item">
-          <div class="store__img">
-            <img src="img/store/product-2.jpg" alt="">
-          </div>
-          <div class="store__content">
-            <h3 class="store__title">Silver Earing</h3>
-            <div class="store__price">120.00 $</div>
-            <button class="store__button">buy now</button>
-          </div>
-        </div>
-        <div class="store__item">
-          <div class="store__img">
-            <img src="img/store/product-12.jpg" alt="">
-          </div>
-          <div class="store__content">
-            <h3 class="store__title">Silver Earing</h3>
-            <div class="store__price">120.00 $</div>
-            <button class="store__button">buy now</button>
-          </div>
-        </div>
-    </div>
+       ${getStoreTemplate(this.store)}
+      </div>
     </div>>
     `
   }

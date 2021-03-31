@@ -4,9 +4,15 @@ import {Header} from '@/components/header/Header'
 import {Footer} from '@/components/footer/Footer'
 import {Blog} from '@/components/blog/Blog'
 export class BlogPage extends Page {
+  static url = 'server/Blog.json'
+  constructor(data = {}) {
+    super()
+    this.data = data
+  }
   getRoot() {
     this.blog = new BlogPageComponent({
-      components: [Header, Blog, Footer]
+      components: [Header, Blog, Footer],
+      data: this.data
     })
     return this.blog.getRoot()
   }

@@ -4,15 +4,16 @@ export class History extends AppComponent {
   static className ='history'
   static tagName = 'div'
 
-  constructor($root) {
+  constructor($root, data) {
     super($root, {
       name: 'History'
     })
+    this.data = data
   }
 
   toHTML() {
+    console.log(this.data, 'history');
     return `
-    
     <div class="container">
       <div class="history__wrap">
         <div class="history__block">

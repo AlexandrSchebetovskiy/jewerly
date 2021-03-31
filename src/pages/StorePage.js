@@ -6,9 +6,15 @@ import {Footer} from '@/components/footer/Footer'
 import {Store} from '@/components/store/Store'
 
 export class StorePage extends Page {
+  static url = 'server/Store.json'
+  constructor(data = {}) {
+    super()
+    this.data = data
+  }
   getRoot() {
     this.store = new StorePageComponent({
-      components: [Header, Store, Footer]
+      components: [Header, Store, Footer],
+      data: this.data
     })
     return this.store.getRoot()
   }
