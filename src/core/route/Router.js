@@ -14,8 +14,8 @@ export class Router {
   }
   init() {
     window.addEventListener('hashchange', this.changePageHandler)
+    console.log('router', this.data)
     this.changePageHandler()
-    console.log(this.data)
   }
   changePageHandler() {
     if (this.page) {
@@ -24,7 +24,7 @@ export class Router {
     this.$palceholder.clear()
 
     const Page = this.getRoute()
-    this.page = new Page()
+    this.page = new Page(this.data)
 
     this.$palceholder.append(this.page.getRoot())
     this.page.afterRender()

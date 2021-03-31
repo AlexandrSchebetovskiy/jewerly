@@ -1,5 +1,5 @@
 import {AppComponent} from '@core/AppComponent'
-import {bestsellersTemplate} from './bestsellers.template'
+// import {bestsellersTemplate} from './bestsellers.template'
 
 export class Bestsellers extends AppComponent {
   static className ='bestsellers'

@@ -11,12 +11,18 @@ import {Instagramm} from '@/components/instagramm/Instagramm'
 import {Footer} from '@/components/footer/Footer'
 
 export class AboutPage extends Page {
+  constructor(data) {
+    super()
+    this.data = data
+  }
   getRoot() {
     this.about = new AboutPageComponent({
       components: [
         Header, About, Partners, Memories, History, Instagramm, Footer
-      ]
+      ],
+      data: this.data.about
     })
+    console.log('aboutpage', this.data);
     return this.about.getRoot()
   }
   afterRender() {

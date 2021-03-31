@@ -4,12 +4,14 @@ export class About extends AppComponent {
   static className = 'about'
   static tagName = 'section'
 
-  constructor($root) {
+  constructor($root, data) {
     super($root, {
       name: 'About',
     })
+    this.data = data
   }
   toHTML() {
+    console.log('aboutComponent', this.data);
     return `
     <div class="container">
       <h2 class="about__title">about us</h2>
