@@ -1,8 +1,7 @@
-
 import {$} from '@core/dom'
 import {ActiveRoute} from './ActiveRoute'
 export class Router {
-  constructor(selector, routes) {
+  constructor(selector, data={}, routes) {
     if (!selector) {
       throw new Error('Selector is not provided in Router!')
     }
@@ -10,26 +9,24 @@ export class Router {
     this.routes = routes
     this.page = null
     this.changePageHandler = this.changePageHandler.bind(this)
+    this.data = data
     this.init()
   }
   init() {
     window.addEventListener('hashchange', this.changePageHandler)
     this.changePageHandler()
+    console.log(this.data)
   }
   changePageHandler() {
-    console.log('this', this);
     if (this.page) {
       this.page.destroy()
     }
     this.$palceholder.clear()
 
-    console.log(this.getRoute())
     const Page = this.getRoute()
-
     this.page = new Page()
 
     this.$palceholder.append(this.page.getRoot())
-
     this.page.afterRender()
   }
   destroy() {
