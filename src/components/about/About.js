@@ -4,17 +4,15 @@ export class About extends AppComponent {
   static className = 'about'
   static tagName = 'section'
 
-  constructor($root, data) {
+  constructor($root) {
     super($root, {
       name: 'About',
     })
-    this.data = data
   }
   toHTML() {
-    console.log('aboutComponent', this.data);
     return `
     <div class="container">
-      <h2 class="about__title">about us${this.data.about.id}</h2>
+      <h2 class="about__title">about us</h2>
       <div class="about__wrap">
         <div class="about__img">
         <img src="img/about/about_us.jpg" alt="founder">

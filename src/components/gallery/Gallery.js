@@ -1,13 +1,15 @@
 import {AppComponent} from '@core/AppComponent'
+import {getGalleryTemplate} from './gallery.template'
 
 export class Gallery extends AppComponent {
   static className ='gallery'
   static tagName = 'section'
 
-  constructor($root) {
+  constructor($root, data) {
     super($root, {
       name: 'Gallery'
     })
+    this.data = data
   }
 
   toHTML() {
@@ -23,12 +25,7 @@ export class Gallery extends AppComponent {
         <li class="gallery__nav-item">platinum</li>
       </ul>
       <div class="gallery__grid">
-        <div class="gallery__item"><img src="" alt=""></div>
-        <div class="gallery__item"><img src="" alt=""></div>
-        <div class="gallery__item"><img src="" alt=""></div>
-        <div class="gallery__item"><img src="" alt=""></div>
-        <div class="gallery__item"><img src="" alt=""></div>
-        <div class="gallery__item"><img src="" alt=""></div>
+        ${getGalleryTemplate(this.data)}
       </div>
     </div>
     `

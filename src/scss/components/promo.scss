@@ -9,27 +9,22 @@
     background: $dark-bg;
   }
 }
-.icon{
-  stroke: chartreuse;
-}
+
 .carousel{
   position: relative;
-  padding: 0 100px;
+  overflow: hidden;
   display: flex;
   justify-content: space-between;
   z-index: 4;
-  &::before{
-    @include arrow;
-    left: 20px;
-    background-image: url('@/img/slider/arrow_left.svg');
-  }
-  &::after{
-    @include arrow;
-    right: 20px;
-    background-image:url('@/img/slider/arrow_right.svg');
-
+  &__item{
+    padding: 0 100px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
   }
   &__img-content {
+    animation-name: fade;
+    animation-duration: 1.5s;
     width: 450px;
   }
   &__text-content{
@@ -58,5 +53,41 @@
   &__button{
     @include button;
     margin-top: 50px;
+  }
+}
+.arrow{
+  // box-sizing: content-box;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 3px solid #fff;
+  border-radius: 2px;
+  border-top: none;
+  padding: 10px;
+  transition: border .2s ease-in;
+  &:hover{
+    border-color: $primary-color;
+
+  }
+  &__left{
+    left: 20px;
+    border-right: none;
+    transform: rotate(45deg);
+  }
+  &__right{
+    right: 20px;
+    border-left: none;
+    
+    transform: rotate(-45deg);
+  }
+}
+@keyframes fade {
+  from {
+      opacity: .4
+  }
+  to {
+      opacity: 1
   }
 }

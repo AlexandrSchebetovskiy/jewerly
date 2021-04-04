@@ -25,7 +25,6 @@ export class Router {
 
     const Page = this.getRoute()
     const Url = Page.url
-    console.log(Url);
     if (!Url) {
       this.page = new Page()
       this.$palceholder.append(this.page.getRoot())
@@ -34,7 +33,6 @@ export class Router {
       fetch(Url)
           .then(res => res.json())
           .then(data => {
-            console.log('router', data)
             this.page = new Page(data)
 
             this.$palceholder.append(this.page.getRoot())

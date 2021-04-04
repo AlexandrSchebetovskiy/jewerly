@@ -6,7 +6,6 @@ export class PageComponent {
     this.data = data
   }
   getRoot() {
-    console.log('PageComponent', this.data);
     const $root = $.create('div', this.className)
 
     this.components = this.components.map(Component => {
