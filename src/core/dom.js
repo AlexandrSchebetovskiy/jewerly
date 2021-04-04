@@ -1,7 +1,9 @@
 class Dom {
   constructor(selector) {
     this.$el = typeof selector === 'string'
-    ? document.querySelector(selector)
+    ? document.querySelectorAll(selector).length === 1
+      ? document.querySelector(selector)
+      : Array.from(document.querySelectorAll(selector))
     : selector
   }
 
@@ -32,6 +34,41 @@ class Dom {
   }
   off(eventType, callback) {
     this.$el.removeEventListener(eventType, callback)
+  }
+  get data() {
+    return this.$el.dataset
+  }
+  css(styles = {}) {
+    Object
+        .keys(styles)
+        .forEach(key => {
+          this.$el.style[key] = styles[key]
+        })
+    return this
+  }
+  add(className) {
+    this.$el.classList.add(className)
+  }
+  remove(className) {
+    this.$el.classList.remove(className)
+  }
+  neighbours() {
+    const arr = Array.from(this.$el.parentElement.children)
+    const i = arr.indexOf(this.$el)
+    if (i >= 0) {
+      arr.splice(i, 1);
+    }
+    return arr
+  }
+  is(selector) {
+    return this.$el.classList.contains(selector)
+  }
+  attr(name, value) {
+    if (value) {
+      this.$el.setAttribute(name, value)
+      return this
+    }
+    return this.$el.getAttribute(name)
   }
 }
 

@@ -25,7 +25,37 @@
       "img": "img/cards/product-26.png"
     }
   ],
-  "tiles":{
-    
-  }
+  "blog":[
+    {
+      "id":1,
+      "title": "JEWERLY FOR SUNSHINE",
+      "day": "28",
+      "month":"September",
+      "text":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, nam sapiente animi itaque culpa, deserunt reprehenderit autem necessitatibus cumque aut quae voluptatem perferendis voluptatum debitis minima optio sed laboriosam ipsum.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, nam sapiente animi itaque culpa, deserunt reprehenderit autem necessitatibus cumque aut quae voluptatem perferendis voluptatum debitis minima optio sed laboriosam ipsum."
+    },
+    {
+      "id":2,
+      "title": "JEWERLY FOR SUNSHINE",
+      "day": "28",
+      "month":"September",
+      "text":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, nam sapiente animi itaque culpa, deserunt reprehenderit autem necessitatibus cumque aut quae voluptatem perferendis voluptatum debitis minima optio sed laboriosam ipsum.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, nam sapiente animi itaque culpa, deserunt reprehenderit autem necessitatibus cumque aut quae voluptatem perferendis voluptatum debitis minima optio sed laboriosam ipsum."
+    },
+    {
+      "id":1,
+      "title": "JEWERLY FOR SUNSHINE",
+      "day": "28",
+      "month":"September",
+      "text":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, nam sapiente animi itaque culpa, deserunt reprehenderit autem necessitatibus cumque aut quae voluptatem perferendis voluptatum debitis minima optio sed laboriosam ipsum.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, nam sapiente animi itaque culpa, deserunt reprehenderit autem necessitatibus cumque aut quae voluptatem perferendis voluptatum debitis minima optio sed laboriosam ipsum."
+    },
+    {
+      "id":2,
+      "title": "JEWERLY FOR SUNSHINE",
+      "day": "28",
+      "month":"September",
+      "text":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, nam sapiente animi itaque culpa, deserunt reprehenderit autem necessitatibus cumque aut quae voluptatem perferendis voluptatum debitis minima optio sed laboriosam ipsum.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, nam sapiente animi itaque culpa, deserunt reprehenderit autem necessitatibus cumque aut quae voluptatem perferendis voluptatum debitis minima optio sed laboriosam ipsum."
+    }
+  ],
+  "slider":[
+    {},{},{}
+  ]
 }

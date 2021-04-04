@@ -8,7 +8,7 @@ export function getStoreTemplate(products) {
             <img src=${product.img} alt="">
           </div>
           <div class="store__content">
-            <h3 class="store__title">${product.name}</h3>
+            <h3 class="store__title store__title--item ">${product.name}</h3>
             <div class="store__price">${product.price} $</div>
             <button class="store__button">buy now</button>
           </div>

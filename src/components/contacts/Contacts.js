@@ -14,7 +14,7 @@ export class Contacts extends AppComponent {
     return `
     <h2 class="contacts__title">contacts</h2>
     <div class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6653.20478790198!2d39.38308212814955!3d48.565303667859396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1616251382083!5m2!1sru!2sru" width="1920" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d989.000566745435!2d39.379321902766726!3d48.56552059939578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x411fcf9479adcca3%3A0x2909b3f53f166746!2z0JvQndCjINC40LwuINCU0LDQu9GP!5e0!3m2!1sru!2sua!4v1617541159849!5m2!1sru!2sua" width="1920" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
     <div class="container">
       <div class="contacts__form">
@@ -34,8 +34,11 @@ export class Contacts extends AppComponent {
             <label for="check">
               I agree that my submitted data is being collected and stored.
             </label>
+            <input type="submit" 
+            class="form__button" value="Submit">
+            
           </div>
-          <button  type="submit" class="form__button">Send message</button>
+          
           
         </form>
       </div>

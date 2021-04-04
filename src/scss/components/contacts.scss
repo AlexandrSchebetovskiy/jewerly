@@ -39,19 +39,25 @@
     border: 1px solid rgba(0, 0, 0, 0.3); 
   }
   &__agreement{
-    
     display: block;
     margin: 0 auto;
-    margin-bottom: 40px;
     label{
       font-size: 16px;
       font-style: italic;
       color:rgba(0,0,0, 0.5);
     }
   }
+  &__check{
+    &:checked + input{
+        background-color: $primary-color;
+        color: #fff;
+    }
+  }
   
   &__button{
+    display: block;
     margin: 0 auto;
+    margin-top: 20px;
     background-color: #dadada;
     padding: 15px 30px;
     border: none;

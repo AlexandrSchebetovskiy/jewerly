@@ -54,6 +54,7 @@
     &:hover {
       img{
         transform: scale(1.1);
+        opacity: 0.5;
       }
       .store__content{
         opacity: 1;
@@ -76,6 +77,10 @@
   }
   &__title{
     color: #000;
+    margin-bottom: 10px;
+  }
+  &__title--item{
+    color: #fff;
     margin-bottom: 10px;
   }
   &__price{

@@ -6,9 +6,15 @@ import {Footer} from '@/components/footer/Footer'
 import {Gallery} from '@/components/gallery/Gallery'
 
 export class GalleryPage extends Page {
+  static url = 'server/Gallery.json'
+  constructor(data = {}) {
+    super()
+    this.data = data
+  }
   getRoot() {
     this.gallery = new GalleryPageComponent({
-      components: [Header, Gallery, Footer]
+      components: [Header, Gallery, Footer],
+      data: this.data
     })
     return this.gallery.getRoot()
   }

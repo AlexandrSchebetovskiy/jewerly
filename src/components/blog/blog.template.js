@@ -1,3 +1,5 @@
+
+import {sliceText} from '@core/utils'
 export function getBlogTemplate(posts) {
   let template = ''
   posts.forEach(post => {
@@ -20,6 +22,4 @@ export function getBlogTemplate(posts) {
   console.log(template)
   return template
 }
-function sliceText(str) {
-  return str.length < 200 ? str : `${str.slice(0, 200)}...`
-}
+
