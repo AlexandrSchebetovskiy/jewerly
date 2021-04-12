@@ -1,9 +1,8 @@
 export function getStoreTemplate(products) {
   let template = ''
   products.forEach(product =>{
-    console.log(product.img);
     template +=`
-    <div data-id ="${product.id}"class="store__item" >
+    <div data-id="${product.id}"data-type="${product.type}"class="store__item" >
           <div class="store__img">
             <img src=${product.img} alt="">
           </div>
@@ -17,3 +16,4 @@ export function getStoreTemplate(products) {
   })
   return template
 }
+

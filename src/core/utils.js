@@ -1,3 +1,4 @@
+import {$} from '@core/dom'
 export function getMethod(string) {
   return 'on' + capitalize(string)
 }
@@ -10,3 +11,38 @@ function capitalize(string = 'string') {
 export function sliceText(str, num = 200) {
   return str.length < num ? str : `${str.slice(0, num)}...`
 }
+function filter(type, store) {
+  hideItems(store)
+  const newStore = store.filter(item => item.dataset.type === type)
+  showItems(newStore)
+}
+
+function showItems(store) {
+  store.forEach(item => {
+    $(item).css({display: 'block', opacity: 1})
+  })
+}
+function hideItems(store) {
+  store.forEach(item => {
+    $(item).css({display: 'none', opacity: 0})
+  })
+}
+export function filterItems(type, root) {
+  const store = $(`.${root}__item`).$el
+  console.log(store)
+  switch (type) {
+    case 'all': showItems(store)
+      break
+    case 'rings': filter('ring', store)
+      break
+    case 'earings': filter('earring', store)
+      break
+    case 'necklaces': filter('necklace', store)
+      break
+    case 'watches': filter('watch', store)
+      break
+    case 'braceletes': filter('bracelet', store)
+      break
+  }
+}
+
