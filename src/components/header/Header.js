@@ -1,12 +1,25 @@
 import {AppComponent} from '@core/AppComponent'
+import {$} from '@core/dom'
 
 export class Header extends AppComponent {
   static className ='header'
   static tagName = 'header'
 
-  constructor($root) {
+  constructor($root, options) {
     super($root, {
-      name: 'Header'
+      name: 'Header',
+      ...options
+    })
+    this.emitter = options.emitter
+  }
+  init() {
+    super.init()
+    this.emitter.subscribe('item', (id, data) => {
+      console.log('emitter', id)
+      console.log(data)
+      const count = $('#count')
+      const counter = count.text()
+      count.text(+counter+1)
     })
   }
 
@@ -31,7 +44,7 @@ export class Header extends AppComponent {
     </div>
     <div class="cart">
       <div class="cart__img"><img src="img/cart.png" alt=""></div>
-      <div class="cart__text">your cart: 0 item</div>
+      <div class="cart__text">your cart: <span id="count">0</span> item</div>
       <div class="cart__sum">- 0.00 $</div>
     </div>
     `

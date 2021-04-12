@@ -14,6 +14,12 @@ class Dom {
     }
     return this.$el.outerHTML.trim()
   }
+  text(text) {
+    if (!text) {
+      return this.$el.textContent
+    }
+    this.$el.textContent = text
+  }
   addHTML(html) {
     if (typeof html === 'string') {
       this.$el.innerHTML += html
@@ -69,6 +75,9 @@ class Dom {
       arr.splice(i, 1);
     }
     return arr
+  }
+  closest(selector) {
+    return new Dom(this.$el.closest(selector))
   }
   is(selector) {
     return this.$el.classList.contains(selector)

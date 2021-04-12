@@ -4,9 +4,10 @@ export class About extends AppComponent {
   static className = 'about'
   static tagName = 'section'
 
-  constructor($root) {
+  constructor($root, options) {
     super($root, {
       name: 'About',
+      ...options
     })
   }
   toHTML() {

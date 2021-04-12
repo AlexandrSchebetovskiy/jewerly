@@ -4,10 +4,11 @@ export class Footer extends AppComponent {
   static className ='footer'
   static tagName = 'footer'
 
-  constructor($root) {
+  constructor($root, options) {
     super($root, {
       name: 'Footer',
-      listeners: ['click']
+      listeners: ['click'],
+      ...options
     })
   }
   toHTML() {

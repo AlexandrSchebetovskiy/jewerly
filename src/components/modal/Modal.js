@@ -3,10 +3,11 @@ import {$} from '@core/dom'
 export class Modal extends AppComponent {
   static className ='modal'
   static tagName = 'div'
-  constructor($root) {
+  constructor($root, options) {
     super($root, {
       name: 'Modal',
-      listeners: ['click']
+      listeners: ['click'],
+      ...options
     })
     this.onClick = this.onClick.bind(this)
   }

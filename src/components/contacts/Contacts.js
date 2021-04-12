@@ -1,12 +1,12 @@
 import {AppComponent} from '@core/AppComponent'
-import {$} from '@core/dom'
 export class Contacts extends AppComponent {
   static className ='contacts'
   static tagName = 'section'
 
-  constructor($root) {
+  constructor($root, options) {
     super($root, {
-      name: 'Contacts'
+      name: 'Contacts',
+      ...options
     })
   }
 

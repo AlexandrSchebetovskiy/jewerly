@@ -4,11 +4,12 @@ import {getInstTemplate} from './inst.template'
 export class Instagramm extends AppComponent {
   static className = 'instagram'
   static tagName = 'div'
-  constructor($root, data) {
+  constructor($root, options) {
     super($root, {
-      name: 'Instagram'
+      name: 'Instagram',
+      ...options
     })
-    this.data = data
+    this.data = options.data
   }
   toHTML() {
     return `

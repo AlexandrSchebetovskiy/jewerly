@@ -6,11 +6,12 @@ import {getPostsTemplate} from './posts.template'
 export class Posts extends AppComponent {
   static className ='posts'
   static tagName = 'section'
-  constructor($root, {blog}) {
+  constructor($root, options) {
     super($root, {
-      name: 'Bestsellers'
+      name: 'Posts',
+      ...options
     })
-    this.data = blog
+    this.data = options.data.blog
   }
   toHTML() {
     return `

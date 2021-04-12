@@ -4,11 +4,12 @@ export class Blog extends AppComponent {
   static className ='blog'
   static tagName = 'section'
 
-  constructor($root, data) {
+  constructor($root, options) {
     super($root, {
-      name: 'Header'
+      name: 'Header',
+      ...options
     })
-    this.data = data
+    this.data = options.data
   }
 
   toHTML() {

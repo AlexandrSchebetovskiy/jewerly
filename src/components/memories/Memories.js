@@ -4,9 +4,10 @@ export class Memories extends AppComponent {
   static className = 'memories'
   static tagName = 'div'
 
-  constructor($root) {
+  constructor($root, options) {
     super($root, {
       name: 'About',
+      ...options
     })
   }
   toHTML() {
