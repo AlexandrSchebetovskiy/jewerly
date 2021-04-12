@@ -34,10 +34,15 @@ export class Store extends AppComponent {
     `
   }
   onClick(event) {
-    if ($(event.target).is('store__nav-item')) {
+    const target = $(event.target)
+    if (target.is('store__nav-item')) {
       const button = $(event.target)
       const type = button.data.type
       filterItems(type, 'store')
+      return
+    }
+    if (target.is()) {
+      return
     }
   }
 }
