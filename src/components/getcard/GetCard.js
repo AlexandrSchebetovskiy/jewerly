@@ -3,6 +3,12 @@ import {AppComponent} from '@core/AppComponent'
 export class GetCard extends AppComponent {
   static className ='get-card'
   static tagName = 'div'
+  constructor($root, options) {
+    super($root, {
+      name: 'Get-Card',
+      ...options
+    })
+  }
   toHTML() {
     return `
     <div class="container">

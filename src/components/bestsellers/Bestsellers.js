@@ -4,11 +4,12 @@ import {bestsellersTemplate} from './bestsellers.template'
 export class Bestsellers extends AppComponent {
   static className ='bestsellers'
   static tagName = 'div'
-  constructor($root, {bestsellers}) {
+  constructor($root, options) {
     super($root, {
-      name: 'Bestsellers'
+      name: 'Bestsellers',
+      ...options
     })
-    this.data = bestsellers
+    this.data = options.data.bestsellers
   }
   toHTML() {
     return `

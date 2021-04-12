@@ -4,9 +4,10 @@ export class Partners extends AppComponent {
   static className ='partners'
   static tagName = 'div'
 
-  constructor($root) {
+  constructor($root, options) {
     super($root, {
-      name: 'Header',
+      name: 'Partners',
+      ...options
     })
   }
   toHTML() {

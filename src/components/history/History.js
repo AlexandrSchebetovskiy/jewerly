@@ -4,10 +4,11 @@ export class History extends AppComponent {
   static className ='history'
   static tagName = 'div'
 
-  constructor($root) {
+  constructor($root, options) {
     super($root, {
       name: 'History',
-      listeners: ['click']
+      listeners: ['click'],
+      ...options
     })
   }
 

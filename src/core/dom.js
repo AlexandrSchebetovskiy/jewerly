@@ -14,6 +14,12 @@ class Dom {
     }
     return this.$el.outerHTML.trim()
   }
+  text(text) {
+    if (!text) {
+      return this.$el.textContent
+    }
+    this.$el.textContent = text
+  }
   addHTML(html) {
     if (typeof html === 'string') {
       this.$el.innerHTML += html

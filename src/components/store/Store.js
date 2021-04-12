@@ -8,12 +8,15 @@ export class Store extends AppComponent {
   static className ='store'
   static tagName = 'section'
 
-  constructor($root, store) {
+  constructor($root, options) {
     super($root, {
       name: 'Store',
-      listeners: ['click']
+      listeners: ['click'],
+      ...options
     })
-    this.store = store
+    this.store = options.data
+    this.emitter = options.emitter
+    this.onClick = this.onClick.bind(this)
   }
 
   toHTML() {
@@ -44,10 +47,11 @@ export class Store extends AppComponent {
     }
     if (target.is('store__button')) {
       const item = target.closest('[data-id]')
-      const id = item.data.id
+      const currId = item.data.id
+      const currEl = this.store.filter(item => item.id == currId)[0]
       const storage = new LocalStorageUtil()
-      storage.putProducts(id)
-      this.emmitter.emit('item', id)
+      storage.putProducts(currId)
+      this.emitter.emit('item', currId, currEl)
       return
     }
   }

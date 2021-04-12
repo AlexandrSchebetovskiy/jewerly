@@ -3,6 +3,12 @@ import {AppComponent} from '@core/AppComponent'
 export class Tiles extends AppComponent {
   static className ='tiles'
   static tagName = 'section'
+  constructor($root, options) {
+    super($root, {
+      name: 'Store',
+      ...options
+    })
+  }
   toHTML() {
     return `
     <div class="container">

@@ -8,12 +8,13 @@ export class Gallery extends AppComponent {
   static className ='gallery'
   static tagName = 'section'
 
-  constructor($root, data) {
+  constructor($root, options) {
     super($root, {
       name: 'Gallery',
-      listeners: ['click']
+      listeners: ['click'],
+      ...options
     })
-    this.data = data
+    this.data = options.data
     this.onClick = this.onClick.bind(this)
   }
 
