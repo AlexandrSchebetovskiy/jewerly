@@ -70,6 +70,9 @@ class Dom {
     }
     return arr
   }
+  closest(selector) {
+    return new Dom(this.$el.closest(selector))
+  }
   is(selector) {
     return this.$el.classList.contains(selector)
   }

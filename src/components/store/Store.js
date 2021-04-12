@@ -1,6 +1,7 @@
 import {AppComponent} from '@core/AppComponent'
 import {getStoreTemplate} from './store.template'
 import {filterItems} from '@core/utils'
+import {LocalStorageUtil} from '@core/LocalStorageUtil'
 import {$} from '@core/dom'
 
 export class Store extends AppComponent {
@@ -41,7 +42,12 @@ export class Store extends AppComponent {
       filterItems(type, 'store')
       return
     }
-    if (target.is()) {
+    if (target.is('store__button')) {
+      const item = target.closest('[data-id]')
+      const id = item.data.id
+      const storage = new LocalStorageUtil()
+      storage.putProducts(id)
+      this.emmitter.emit('item', id)
       return
     }
   }
