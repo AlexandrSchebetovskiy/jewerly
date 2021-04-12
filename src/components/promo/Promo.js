@@ -11,7 +11,6 @@ export class Promo extends AppComponent {
       name: 'Promo',
       listeners: ['click']
     })
-    this.a = 1
   }
   toHTML() {
     return `
@@ -72,8 +71,6 @@ export class Promo extends AppComponent {
   }
   onClick(event) {
     if ($(event.target).is('arrow')) {
-      const $current = $('.carousel__item[data-curr="true"]')
-      console.log($current.data);
       if ($(event.target).is('arrow__left')) {
         prevSlide()
       } else {

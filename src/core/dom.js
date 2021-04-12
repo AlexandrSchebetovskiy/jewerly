@@ -14,9 +14,19 @@ class Dom {
     }
     return this.$el.outerHTML.trim()
   }
+  addHTML(html) {
+    if (typeof html === 'string') {
+      this.$el.innerHTML += html
+      return this
+    }
+    return this.$el.outerHTML.trim()
+  }
   clear() {
     this.html('')
     return this
+  }
+  delete() {
+    this.$el.remove()
   }
   append(node) {
     if (node instanceof Dom) {

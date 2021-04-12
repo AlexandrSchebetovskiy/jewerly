@@ -1,5 +1,5 @@
 import {AppComponent} from '@core/AppComponent'
-
+import {$} from '@core/dom'
 export class Contacts extends AppComponent {
   static className ='contacts'
   static tagName = 'section'
@@ -17,31 +17,25 @@ export class Contacts extends AppComponent {
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d989.000566745435!2d39.379321902766726!3d48.56552059939578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x411fcf9479adcca3%3A0x2909b3f53f166746!2z0JvQndCjINC40LwuINCU0LDQu9GP!5e0!3m2!1sru!2sua!4v1617541159849!5m2!1sru!2sua" width="1920" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
     <div class="container">
-      <div class="contacts__form">
-        <h2 class="form__title">get in touch</h2>
-        <form action="#" class="form">
-          <div class="form__wrap">
-            <input type="text" class="form__input" placeholder="Your Name">
-            <input type="text" class="form__input"  placeholder="Your E-Mail">
-            <input id="subject" type="text" 
-            class="form__input"placeholder="Subject">
+    <div class="contacts__form">
+      
+      <h2 class="form__title">get in touch</h2>
+      <form action="/" method="POSt" name="form" class="form">
+        <input type="text" required name="user-name"
+        class="form__input" placeholder="Your Name">
+        <input type="text" required name="user-mail"
+        class="form__input"  placeholder="Your E-Mail">
+        <input id="subject" type="text" name="user-subj"
+        class="form__input"placeholder="Subject">
 
-            <textarea class="form__input" id="form-msg" 
-            rows="3" placeholder="Message"></textarea>
-          </div>
-          <div class="form__agreement">
-            <input name="check" type="checkbox" class="form__check">
-            <label for="check">
-              I agree that my submitted data is being collected and stored.
-            </label>
-            <input type="submit" 
-            class="form__button" value="Submit">
-            
-          </div>
-          
-          
-        </form>
-      </div>
+        <textarea class="form__input" id="form-msg" name="user-msg"
+        rows="3" resizable="false"placeholder="Message"></textarea>
+        
+        <button name="user-submit"type="submit" 
+          class="form__button">Submit</button>
+      </form>
+    </div>
+  </div>
     </div>
     `
   }

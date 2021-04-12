@@ -36,7 +36,8 @@
   &__grid{
     margin-top: 80px;
     display: grid;
-    grid-template: repeat(4, 270px) /repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 270px;
     gap: 30px;
   }
   &__item{
@@ -46,7 +47,9 @@
     overflow: hidden;
     position: relative;
     border: 1px solid #ccc;
+    transition: .2s;
     img{
+      object-fit: initial;
       width: 100%;
       height: 100%;
       transition: .4s;

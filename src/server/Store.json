@@ -1,181 +1,211 @@
 [
   {
     "id": 1,
-    "name": "name",
+    "name": "Platinum bracelet with gems",
     "price": 550.00,
-    "img": "img/store/product-1.jpg"
+    "img": "img/store/product-1.jpg",
+    "type":"bracelet"
   },
   {
     "id": 2,
-    "name": "name",
+    "name": "Casual style silver ring",
     "price": 550.00,
-    "img": "img/store/product-2.jpg"
+    "img": "img/store/product-2.jpg",
+    "type":"ring"
   },
   {
     "id": 3,
-    "name": "name",
+    "name": "Wide silver bracelet",
     "price": 550.00,
-    "img": "img/store/product-3.jpg"
+    "img": "img/store/product-3.jpg",
+    "type":"bracelet"
   },
   {
     "id": 4,
-    "name": "name",
+    "name": "Curly silver ring",
     "price": 550.00,
-    "img": "img/store/product-4.jpg"
+    "img": "img/store/product-4.jpg",
+    "type":"ring"
   },
   {
     "id": 5,
-    "name": "name",
+    "name": "Simply paladium and diamonds",
     "price": 550.00,
-    "img": "img/store/product-5.jpg"
+    "img": "img/store/product-5.jpg",
+    "type":"ring"
   },
   {
     "id": 6,
-    "name": "name",
+    "name": "Zirconium earring",
     "price": 550.00,
-    "img": "img/store/product-6.jpg"
+    "img": "img/store/product-6.jpg",
+    "type":"earring"
   },
   {
     "id": 7,
-    "name": "name",
+    "name": "Ptalinum and diamond",
     "price": 550.00,
-    "img": "img/store/product-7.jpg"
+    "img": "img/store/product-7.jpg",
+    "type":"earring"
   },
   {
     "id": 8,
-    "name": "name",
+    "name": "Heavy earrings",
     "price": 550.00,
-    "img": "img/store/product-8.jpg"
+    "img": "img/store/product-8.jpg",
+    "type":"earring"
   },
   {
     "id": 9,
-    "name": "name",
+    "name": " earrings",
     "price": 550.00,
-    "img": "img/store/product-9.jpg"
+    "img": "img/store/product-9.jpg",
+    "type":"earring"
   },
   {
     "id": 10,
-    "name": "name",
+    "name": "Ruby earrings",
     "price": 550.00,
-    "img": "img/store/product-10.jpg"
+    "img": "img/store/product-10.jpg",
+    "type":"earring"
   },
   {
     "id": 11,
-    "name": "name",
+    "name": "Gold&Sliver double necklace",
     "price": 550.00,
-    "img": "img/store/product-11.jpg"
+    "img": "img/store/product-11.jpg",
+    "type":"necklace"
   },
   {
     "id": 12,
-    "name": "name",
+    "name": "Double Silver with diamond",
     "price": 550.00,
-    "img": "img/store/product-12.jpg"
+    "img": "img/store/product-12.jpg",
+    "type":"necklace"
   },
   {
     "id": 13,
-    "name": "name",
+    "name": "Silver and amethyst bracelet",
     "price": 550.00,
-    "img": "img/store/product-13.jpg"
+    "img": "img/store/product-13.jpg",
+    "type":"bracelet"
   },
   {
     "id": 14,
-    "name": "name",
+    "name": "Paladium ring",
     "price": 550.00,
-    "img": "img/store/product-14.jpg"
+    "img": "img/store/product-14.jpg",
+    "type":"ring"
   },
   {
     "id": 15,
-    "name": "name",
+    "name": "Lovely ring",
     "price": 550.00,
-    "img": "img/store/product-15.jpg"
+    "img": "img/store/product-15.jpg",
+    "type":"ring"
   },
   {
     "id": 16,
-    "name": "name",
+    "name": "Couple of gems",
     "price": 550.00,
-    "img": "img/store/product-16.jpg"
+    "img": "img/store/product-16.jpg",
+    "type":"ring"
   },
   {
     "id": 17,
-    "name": "name",
+    "name": "Pendant with 84 gems",
     "price": 550.00,
-    "img": "img/store/product-17.jpg"
+    "img": "img/store/product-17.jpg",
+    "type":"necklace"
   },
   {
     "id": 18,
-    "name": "name",
+    "name": "Mens Citizen watch",
     "price": 550.00,
-    "img": "img/store/product-18.jpg"
+    "img": "img/store/product-18.jpg",
+    "type":"watch"
   },
   {
     "id": 19,
-    "name": "name",
+    "name": "Luxary mans watch",
     "price": 550.00,
-    "img": "img/store/product-19.jpg"
+    "img": "img/store/product-19.jpg",
+    "type":"watch"
   },
   {
     "id": 20,
-    "name": "name",
+    "name": "Swiss gold watch",
     "price": 550.00,
-    "img": "img/store/product-20.jpg"
+    "img": "img/store/product-20.jpg",
+    "type":"watch"
   },{
     "id": 21,
-    "name": "name",
+    "name": "Black magic watch",
     "price": 550.00,
-    "img": "img/store/product-21.jpg"
+    "img": "img/store/product-21.jpg",
+    "type":"watch"
   },
   {
     "id": 22,
-    "name": "name",
+    "name": "Lether style watch",
     "price": 550.00,
-    "img": "img/store/product-22.jpg"
+    "img": "img/store/product-22.jpg",
+    "type":"watch"
   },
   {
     "id": 23,
-    "name": "name",
+    "name": "Golden Flower",
     "price": 550.00,
-    "img": "img/store/product-23.jpg"
+    "img": "img/store/product-23.jpg",
+    "type":"earring"
   },
   {
     "id": 24,
-    "name": "name",
+    "name": "Platinum earring",
     "price": 550.00,
-    "img": "img/store/product-24.jpg"
+    "img": "img/store/product-24.jpg",
+    "type":"earring"
   },
   {
     "id": 25,
-    "name": "name",
+    "name": "Lite Diamons",
     "price": 550.00,
-    "img": "img/store/product-25.jpg"
+    "img": "img/store/product-25.jpg",
+    "type":"earring"
   },
   {
     "id": 26,
-    "name": "name",
+    "name": "Ruby on Golden rails",
     "price": 550.00,
-    "img": "img/store/product-26.jpg"
+    "img": "img/store/product-26.jpg",
+    "type":"earring"
   },
   {
     "id": 27,
-    "name": "name",
+    "name": "Angels wings",
     "price": 550.00,
-    "img": "img/store/product-27.jpg"
+    "img": "img/store/product-27.jpg",
+    "type":"earring"
   },
   {
     "id": 28,
-    "name": "name",
+    "name": "Sea Pearl",
     "price": 550.00,
-    "img": "img/store/product-28.jpg"
+    "img": "img/store/product-28.jpg",
+    "type":"ring"
   },
   {
     "id": 29,
-    "name": "name",
+    "name": "Night Star ring",
     "price": 550.00,
-    "img": "img/store/product-29.jpg"
+    "img": "img/store/product-29.jpg",
+    "type":"ring"
   },
   {
     "id": 30,
-    "name": "name",
+    "name": "Nostalgy ring",
     "price": 550.00,
-    "img": "img/store/product-30.jpg"
+    "img": "img/store/product-30.jpg",
+    "type":"ring"
   }
 ]
