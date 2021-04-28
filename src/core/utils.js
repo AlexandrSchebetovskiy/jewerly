@@ -11,13 +11,13 @@ function capitalize(string = 'string') {
 export function sliceText(str, num = 200) {
   return str.length < num ? str : `${str.slice(0, num)}...`
 }
-function filter(type, store) {
+export function filter(type, store) {
   hideItems(store)
   const newStore = store.filter(item => item.dataset.type === type)
   showItems(newStore)
 }
 
-function showItems(store) {
+export function showItems(store) {
   store.forEach(item => {
     $(item).css({display: 'block', opacity: 1})
   })

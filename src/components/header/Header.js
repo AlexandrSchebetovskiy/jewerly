@@ -15,8 +15,8 @@ export class Header extends AppComponent {
   init() {
     super.init()
     this.emitter.subscribe('item', (id, data) => {
-      console.log('emitter', id)
-      console.log(data)
+      // console.log('emitter', id)
+      // console.log(data)
       const count = $('#count')
       const counter = count.text()
       count.text(+counter+1)

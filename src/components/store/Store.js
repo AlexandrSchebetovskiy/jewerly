@@ -1,12 +1,16 @@
 import {AppComponent} from '@core/AppComponent'
 import {getStoreTemplate} from './store.template'
 import {filterItems} from '@core/utils'
-import {LocalStorageUtil} from '@core/LocalStorageUtil'
+import {handleSetLocationStorage} from './store.functions'
 import {$} from '@core/dom'
 
 export class Store extends AppComponent {
   static className ='store'
   static tagName = 'section'
+
+  static classNameActive = 'store__button--active'
+  static labelAdd = 'Add to Cart'
+  static labelRemove = 'Remove'
 
   constructor($root, options) {
     super($root, {
@@ -45,13 +49,14 @@ export class Store extends AppComponent {
       filterItems(type, 'store')
       return
     }
+
     if (target.is('store__button')) {
       const item = target.closest('[data-id]')
-      const currId = item.data.id
-      const currEl = this.store.filter(item => item.id == currId)[0]
-      const storage = new LocalStorageUtil()
-      storage.putProducts(currId)
-      this.emitter.emit('item', currId, currEl)
+      console.log(item)
+      const id = item.data.id
+      const el = this.store.filter(item => item.id == id)[0]
+      this.emitter.emit('item', id, el)
+      handleSetLocationStorage(id)
       return
     }
   }
