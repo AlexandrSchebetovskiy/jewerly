@@ -7,7 +7,7 @@ export class LocalStorageUtil {
   getProducts() {
     const productsLocalStorage = localStorage.getItem(this.keyName)
     if (productsLocalStorage !==null) {
-      return JSON.parse(productsLocalStorage).map(item => +item)
+      return JSON.parse(productsLocalStorage)
     }
     return []
   }
@@ -18,12 +18,15 @@ export class LocalStorageUtil {
     const index = products.indexOf(id)
     if (index === -1) {
       products.push(id)
+      console.log(products)
       pushProduct = true
     } else {
       products.splice(index, 1)
+      console.log(products)
     }
     localStorage.setItem(this.keyName, JSON.stringify(products))
     return {products, pushProduct}
   }
 }
+export const localStorageUtil = new LocalStorageUtil()
 

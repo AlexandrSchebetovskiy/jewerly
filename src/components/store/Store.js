@@ -55,8 +55,8 @@ export class Store extends AppComponent {
       console.log(item)
       const id = item.data.id
       const el = this.store.filter(item => item.id == id)[0]
+      handleSetLocationStorage(event.target, id)
       this.emitter.emit('item', id, el)
-      handleSetLocationStorage(id)
       return
     }
   }
