@@ -9,7 +9,7 @@ import {ContactsPage} from './pages/ContactsPage'
 import {StorePage} from './pages/StorePage'
 import {GalleryPage} from './pages/GalleryPage'
 import {NotFound} from './pages/NotFound'
-
+import {CartPage} from './pages/CartPage'
 
 new Router('#app', {
   home: HomePage,
@@ -18,7 +18,8 @@ new Router('#app', {
   contacts: ContactsPage,
   store: StorePage,
   gallery: GalleryPage,
-  notFound: NotFound
+  notFound: NotFound,
+  cart: CartPage
 })
 
 

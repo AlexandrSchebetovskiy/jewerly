@@ -52,11 +52,10 @@ export class Store extends AppComponent {
 
     if (target.is('store__button')) {
       const item = target.closest('[data-id]')
-      console.log(item)
       const id = item.data.id
       const el = this.store.filter(item => item.id == id)[0]
-      handleSetLocationStorage(event.target, id)
-      this.emitter.emit('item', id, el)
+      const isPush = handleSetLocationStorage(event.target, id)
+      this.emitter.emit('item', id, el, isPush)
       return
     }
   }

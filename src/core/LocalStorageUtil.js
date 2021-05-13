@@ -18,11 +18,9 @@ export class LocalStorageUtil {
     const index = products.indexOf(id)
     if (index === -1) {
       products.push(id)
-      console.log(products)
       pushProduct = true
     } else {
       products.splice(index, 1)
-      console.log(products)
     }
     localStorage.setItem(this.keyName, JSON.stringify(products))
     return {products, pushProduct}

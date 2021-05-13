@@ -29,5 +29,6 @@ export function handleSetLocationStorage(element, id) {
     element.classList.remove(Store.classNameActive);
     element.innerHTML = Store.labelAdd;
   }
+  return pushProduct
 }
 
