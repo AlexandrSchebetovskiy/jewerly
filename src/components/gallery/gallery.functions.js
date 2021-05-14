@@ -8,7 +8,6 @@ export function createGalleryModal(id, data) {
 
   const $el = $.create(Modal.tagName, Modal.className)
   const modal = new GalleryModal($el, id, data)
-  console.log($root);
   $el.html(modal.toHTML())
   $root.append($el)
   modal.init()

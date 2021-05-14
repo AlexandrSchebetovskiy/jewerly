@@ -3,8 +3,9 @@ import {getCartTemplate} from './getCartTemplate'
 import {$} from '@core/dom'
 import {getTotalPrice} from '../header/header.functions'
 import {localStorageUtil} from '@core/LocalStorageUtil'
+import {createOrderModal} from './cart.functions'
 export class Cart extends AppComponent {
-    static className ='Cart'
+    static className ='cart'
     static tagName = 'section'
 
     constructor($root, options) {
@@ -31,6 +32,7 @@ export class Cart extends AppComponent {
     }
     onClick(event) {
       const $target = $(event.target)
+
       if ($target.is('cart__btn')) {
         const id = $target.data.id
         localStorageUtil.removeOne(id)
@@ -43,6 +45,10 @@ export class Cart extends AppComponent {
         cartWrap.html(template)
         const newCart = localStorageUtil.getProducts()
         this.emitter.emit('item', newCart)
+        return
+      }
+      if ($target.is('cart__order')) {
+        createOrderModal()
       }
     }
 }

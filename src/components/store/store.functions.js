@@ -22,6 +22,6 @@ export function filterItems(type, root) {
 export function handleSetLocationStorage(element, item) {
   const {pushProducts, products} = localStorageUtil.putProducts(item)
 
-  return {products}
+  return {pushProducts, products}
 }
 
