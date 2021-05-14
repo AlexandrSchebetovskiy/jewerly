@@ -8,9 +8,6 @@ export class Store extends AppComponent {
   static className ='store'
   static tagName = 'section'
 
-  static classNameActive = 'store__button--active'
-  static labelAdd = 'Add to Cart'
-  static labelRemove = 'Remove'
 
   constructor($root, options) {
     super($root, {
@@ -52,11 +49,10 @@ export class Store extends AppComponent {
 
     if (target.is('store__button')) {
       const item = target.closest('[data-id]')
-      console.log(item)
       const id = item.data.id
       const el = this.store.filter(item => item.id == id)[0]
-      handleSetLocationStorage(event.target, id)
-      this.emitter.emit('item', id, el)
+      const newCart = handleSetLocationStorage(event.target, {...el, count: 1})
+      this.emitter.emit('item', newCart.products)
       return
     }
   }

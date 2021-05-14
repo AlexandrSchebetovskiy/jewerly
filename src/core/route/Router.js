@@ -51,6 +51,8 @@ export class Router {
         return this.routes.blog
       case 'gallery':
         return this.routes.gallery
+      case 'cart':
+        return this.routes.cart
       case 'store':
         return this.routes.store
       case 'contacts':
