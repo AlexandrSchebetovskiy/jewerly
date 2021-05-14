@@ -20,7 +20,7 @@ export class Contacts extends AppComponent {
     <div class="contacts__form">
       
       <h2 class="form__title">get in touch</h2>
-      <form action="" method="POSt" name="form" class="form">
+      <form action="" method="POST" name="form" class="form">
         <input type="text" required name="user-name"
         class="form__input" placeholder="Your Name">
         <input type="text" required name="user-mail"

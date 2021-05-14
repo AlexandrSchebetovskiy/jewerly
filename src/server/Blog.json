@@ -1,16 +1,23 @@
 [
   {
-    "id":1,
+    "id":"blog1",
     "title": "JEWERLY FOR SUNSHINE",
     "date": "SEPTEMBER 28, 2020",
     "img": "img/blog/image-18.jpg",
     "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, nam sapiente animi itaque culpa, deserunt reprehenderit autem necessitatibus cumque aut quae voluptatem perferendis voluptatum debitis minima optio sed laboriosam ipsum.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, nam sapiente animi itaque culpa, deserunt reprehenderit autem necessitatibus cumque aut quae voluptatem perferendis voluptatum debitis minima optio sed laboriosam ipsum."
   },
   {
-    "id":2,
+    "id":"blog2",
     "title": "JEWERLY FOR SUNSHINE",
     "date": "SEPTEMBER 28, 2020",
-    "img": "img/blog/image-18.jpg",
+    "img": "img/blog/image-9.jpg",
+    "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, nam sapiente animi itaque culpa, deserunt reprehenderit autem necessitatibus cumque aut quae voluptatem perferendis voluptatum debitis minima optio sed laboriosam ipsum.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, nam sapiente animi itaque culpa, deserunt reprehenderit autem necessitatibus cumque aut quae voluptatem perferendis voluptatum debitis minima optio sed laboriosam ipsum."
+  },
+  {
+    "id":"blog3",
+    "title": "JEWERLY FOR SUNSHINE",
+    "date": "SEPTEMBER 28, 2020",
+    "img": "img/blog/image-7.jpg",
     "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, nam sapiente animi itaque culpa, deserunt reprehenderit autem necessitatibus cumque aut quae voluptatem perferendis voluptatum debitis minima optio sed laboriosam ipsum.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, nam sapiente animi itaque culpa, deserunt reprehenderit autem necessitatibus cumque aut quae voluptatem perferendis voluptatum debitis minima optio sed laboriosam ipsum."
   }
 ]

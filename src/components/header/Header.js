@@ -42,7 +42,7 @@ export class Header extends AppComponent {
             <li class="menu__item"><a href="#home">home</a></li> 
             <li class="menu__item"><a href="#about">about us</a></li>
             <li class="menu__item"><a href="#store">store</a></li>
-            <li class="menu__item"><a href="#gallery">galerry</a></li>
+            <li class="menu__item"><a href="#gallery">gallery</a></li>
             <li class="menu__item"><a href="#blog">blog</a></li>
             <li class="menu__item"><a href="#contacts">contacts</a></li>
           </ul>
