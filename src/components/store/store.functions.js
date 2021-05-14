@@ -1,7 +1,7 @@
 import {$} from '@core/dom'
 import {filter, showItems} from '@core/utils'
 import {localStorageUtil} from '@core/LocalStorageUtil'
-import {Store} from './Store'
+// import {Store} from './Store'
 export function filterItems(type, root) {
   const store = $(`.${root}__item`).$el
   switch (type) {
@@ -19,16 +19,9 @@ export function filterItems(type, root) {
       break
   }
 }
-export function handleSetLocationStorage(element, id) {
-  const {pushProduct}= localStorageUtil.putProducts(id);
+export function handleSetLocationStorage(element, item) {
+  const {pushProducts, products} = localStorageUtil.putProducts(item)
 
-  if (pushProduct) {
-    element.classList.add(Store.classNameActive);
-    element.innerHTML = Store.labelRemove;
-  } else {
-    element.classList.remove(Store.classNameActive);
-    element.innerHTML = Store.labelAdd;
-  }
-  return pushProduct
+  return {products}
 }
 

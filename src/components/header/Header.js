@@ -1,6 +1,6 @@
 import {AppComponent} from '@core/AppComponent'
 import {$} from '@core/dom'
-import {getCount} from './header.functions'
+import {getCount, getTotalPrice} from './header.functions'
 
 export class Header extends AppComponent {
   static className ='header'
@@ -15,17 +15,18 @@ export class Header extends AppComponent {
   }
   init() {
     super.init()
-    this.emitter.subscribe('item', (id, data, isPush) => {
-      console.log('emitter', id)
-      console.log(data)
-      const count = $('#count')
-      if (isPush) {
-        const counter = count.text()
-        count.text(+counter+1)
-      } else {
-        const counter = count.text()
-        count.text(+counter-1)
-      }
+    this.emitter.subscribe('item', cart => {
+      console.log('It is Cart', cart);
+      const counter = $('#count')
+      const price = $('#price')
+      let amount = 0
+      let totalPrice = 0
+      cart.forEach(i => {
+        amount += i.count
+        totalPrice += i.count*i.price
+      })
+      counter.text(amount)
+      price.text(totalPrice + '.00 $')
     })
   }
 
@@ -53,7 +54,7 @@ export class Header extends AppComponent {
       <div class="cart-header__img"><img src="img/cart.png" alt=""></div>
       <div class="cart-header__text">
       your cart: <span id="count">${getCount()}</span> item</div>
-      <div class="cart-header__sum">- 0.00 $</div>
+      <div class="cart-header__sum" id="price">${getTotalPrice()}.00 $</div>
     </div>
     </a>
     `
