@@ -10,6 +10,7 @@ import {StorePage} from './pages/StorePage'
 import {GalleryPage} from './pages/GalleryPage'
 import {NotFound} from './pages/NotFound'
 import {CartPage} from './pages/CartPage'
+import {ArticlePage} from './pages/ArticlePage'
 
 new Router('#app', {
   home: HomePage,
@@ -19,7 +20,8 @@ new Router('#app', {
   store: StorePage,
   gallery: GalleryPage,
   notFound: NotFound,
-  cart: CartPage
+  cart: CartPage,
+  article: ArticlePage
 })
 
 

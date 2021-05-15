@@ -22,18 +22,18 @@ export class Router {
     }
     this.$palceholder.clear()
 
-
+    // eslint-disable-next-line no-debugger
     const Page = this.getRoute()
     const Url = Page.url
     if (!Url) {
-      this.page = new Page(ActiveRoute.param )
+      this.page = new Page(ActiveRoute.param)
       this.$palceholder.append(this.page.getRoot())
       this.page.afterRender()
     } else {
       fetch(Url)
           .then(res => res.json())
           .then(data => {
-            this.page = new Page(data, ActiveRoute.param )
+            this.page = new Page(data, ActiveRoute.param)
 
             this.$palceholder.append(this.page.getRoot())
             this.page.afterRender()
@@ -59,6 +59,8 @@ export class Router {
         return this.routes.contacts
       case 'home':
         return this.routes.home
+      case 'article':
+        return this.routes.article
       case '':
         return this.routes.home
       default:

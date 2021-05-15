@@ -11,7 +11,9 @@ export function getBlogTemplate(posts) {
           </a>
           <div class="article__date">${post.date}</div>
           <div class="article__text">${sliceText(post.text)}</div>
-          <button class="article__button">read more</button>
+          <a href="#article/${post.id}">
+            <button class="article__button">read more</button>
+          </a>
         </div>
         <div class="article__img">
           <img src=${post.img} alt="">
