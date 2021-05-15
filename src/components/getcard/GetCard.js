@@ -1,11 +1,13 @@
 import {AppComponent} from '@core/AppComponent'
-
+import {$} from '@core/dom'
+import {createGetCardModal} from './getCard.functions'
 export class GetCard extends AppComponent {
   static className ='get-card'
   static tagName = 'div'
   constructor($root, options) {
     super($root, {
       name: 'Get-Card',
+      listeners: ['click'],
       ...options
     })
   }
@@ -21,5 +23,11 @@ export class GetCard extends AppComponent {
       </div>
     </div>
     `
+  }
+  onClick(event) {
+    const $target = $(event.target)
+    if ($target.is('get-card__button')) {
+      createGetCardModal()
+    }
   }
 }

@@ -10,7 +10,8 @@ export function bestsellersTemplate(data) {
       <div class="card__content">
         <h3 class="card__title">${el.name}</h3>
         <div class="card__price">${el.price} $</div>
-        <button class="card__button">buy now</button>
+        <a href=""></a>
+        <button class="card__button" data-id="${el.id}">buy now</button>
       </div>
     </div>
     `

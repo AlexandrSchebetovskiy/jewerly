@@ -7,14 +7,16 @@ import {Store} from '@/components/store/Store'
 
 export class StorePage extends Page {
   static url = 'server/Store.json'
-  constructor(data = {}) {
+  constructor(data = {}, param) {
     super()
     this.data = data
+    this.param = param
   }
   getRoot() {
     this.store = new StorePageComponent({
       components: [Header, Store, Footer],
-      data: this.data
+      data: this.data,
+      param: this.param
     })
     return this.store.getRoot()
   }

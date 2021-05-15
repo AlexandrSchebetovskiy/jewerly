@@ -135,9 +135,15 @@
     transition: .2s;
     font-size: 18px;
     background: none;
+    a{
+      color: #fff;
+      text-decoration: none;
+    }
     &:hover{
       background: #fff;
-      color: #000;
+      a{
+        color: #000;
+      }
     }
   }
 

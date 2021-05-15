@@ -40,7 +40,6 @@ export class Cart extends AppComponent {
         const priceTotal = $('.cart__total')
         const template = getCartTemplate()
         const price = getTotalPrice()
-        console.log(price)
         priceTotal.text(price+'.00 $')
         cartWrap.html(template)
         const newCart = localStorageUtil.getProducts()

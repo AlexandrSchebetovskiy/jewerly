@@ -26,14 +26,14 @@ export class Router {
     const Page = this.getRoute()
     const Url = Page.url
     if (!Url) {
-      this.page = new Page()
+      this.page = new Page(ActiveRoute.param )
       this.$palceholder.append(this.page.getRoot())
       this.page.afterRender()
     } else {
       fetch(Url)
           .then(res => res.json())
           .then(data => {
-            this.page = new Page(data)
+            this.page = new Page(data, ActiveRoute.param )
 
             this.$palceholder.append(this.page.getRoot())
             this.page.afterRender()
