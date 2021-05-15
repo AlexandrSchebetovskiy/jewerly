@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import './core/variables.scss';
+@import './core/variables';
 @import './core/mixines';
-@import './components/header.scss';
+@import './components/header';
 @import './components/promo';
 @import './components/tiles';
 @import './components/bestsellers';
@@ -15,6 +15,7 @@
 @import './components/404';
 @import './components/modal';
 @import './components/cart';
+@import './components/articles';
 
 *{
   margin: 0;
