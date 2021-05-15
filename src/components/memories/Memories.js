@@ -19,7 +19,7 @@ export class Memories extends AppComponent {
       <div class="memories__descr">Lorem ipsum dolor sit 
       amet consectetur adipisicing elit.
        Nam officia possimus tenetur soluta perferendis commodi?</div>
-      <button class="memories__button">Shop now</button>
+      <button class="memories__button"><a href="#store">Shop now</a></button>
     </div>
     `
   }

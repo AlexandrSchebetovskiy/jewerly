@@ -29,7 +29,6 @@ function hideItems(store) {
 }
 export function filterItems(type, root) {
   const store = $(`.${root}__item`).$el
-  console.log(store)
   switch (type) {
     case 'all': showItems(store)
       break

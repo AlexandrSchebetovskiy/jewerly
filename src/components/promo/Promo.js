@@ -28,7 +28,9 @@ export class Promo extends AppComponent {
             </h1>
             <p class="carousel__descr">Lorem ipsum dolor sit amet consectetur 
             adipisicing elit. Nam, deleniti!</p>
+            <a href=#store>
             <button class="carousel__button">See the Collectoin</button>
+            </a>
           </div>
         </div>
 
@@ -43,7 +45,10 @@ export class Promo extends AppComponent {
             </h1>
             <p class="carousel__descr">Lorem ipsum dolor sit amet consectetur 
             adipisicing elit. Nam, deleniti!</p>
+            <a href=#store>
             <button class="carousel__button">See the Collectoin</button>
+            </a>
+            
           </div>
         </div>
 
@@ -58,7 +63,9 @@ export class Promo extends AppComponent {
             </h1>
             <p class="carousel__descr">Lorem ipsum dolor sit amet consectetur 
             adipisicing elit. Nam, deleniti!</p>
+            <a href=#store>
             <button class="carousel__button">See the Collectoin</button>
+            </a>
           </div>
         </div>
 

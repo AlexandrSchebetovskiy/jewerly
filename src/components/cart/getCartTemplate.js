@@ -2,7 +2,6 @@ import {localStorageUtil} from '@core/LocalStorageUtil'
 
 export function getCartTemplate() {
   const cart = localStorageUtil.getProducts()
-  console.log(cart);
   let template = ''
   if (!cart.length) {
     template = `

@@ -18,9 +18,11 @@ export class Store extends AppComponent {
     this.store = options.data
     this.emitter = options.emitter
     this.onClick = this.onClick.bind(this)
+    this.param = options.param
   }
 
   toHTML() {
+    console.log('It is store', this.param);
     return `
     <div class="container">
       <h2 class="store__title">store</h2>
@@ -38,6 +40,14 @@ export class Store extends AppComponent {
     </div>>
     `
   }
+
+  init() {
+    super.init()
+    if (this.param) {
+      filterItems(this.param, 'store')
+    }
+  }
+
   onClick(event) {
     const target = $(event.target)
     if (target.is('store__nav-item')) {

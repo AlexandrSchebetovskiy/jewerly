@@ -16,7 +16,6 @@ export class Header extends AppComponent {
   init() {
     super.init()
     this.emitter.subscribe('item', cart => {
-      console.log('It is Cart', cart);
       const counter = $('#count')
       const price = $('#price')
       let amount = 0

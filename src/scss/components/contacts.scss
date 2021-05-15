@@ -49,15 +49,21 @@
     display: block;
     margin: 0 auto;
     margin-top: 20px;
-    background-color: #dadada;
+    background-color: $primary-color;
+    border: 1px solid $primary-color;
     padding: 15px 30px;
     border: none;
     font-size: 18px;
     font-style: italic;
     font-weight: bold;
-    color:rgba(0,0,0, 0.5);
+    color:#fff;
     outline:none;
     grid-column: 1/3;
+    transition: .2s;
+    &:hover{
+      background-color: #fff;
+      color: $primary-color;
+    }
   }
 }
 #subject{

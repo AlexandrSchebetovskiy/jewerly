@@ -60,6 +60,11 @@
     color: #fff;
     background-color: $primary-color;
     text-transform: capitalize;
+    transition: .2s;
+    &:hover{
+      color: $primary-color;
+      background-color: #fff;
+    }
   }
 }
 .card:hover{

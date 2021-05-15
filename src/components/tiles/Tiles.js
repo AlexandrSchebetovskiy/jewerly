@@ -14,25 +14,25 @@ export class Tiles extends AppComponent {
     <div class="container">
       <div class="tiles__wrap">
           
-          <a id="watches" href="#" class="tile">
+          <a id="watches" href="#store/watches" class="tile">
           <h3 class="tile__title">watches</h3>
           <span class="tile__descr">shop watches</span>
           </a>
-          <a id="necklaces" href="#" class="tile">
+          <a id="necklaces" href="#store/necklaces" class="tile">
             <h3 class="tile__title">pedants<br>necklaces</h3>
             <span class="tile__descr">shop now</span>
           </a>
-          <a id="earings" href="#" class="tile">
+          <a id="earings" href="#store/earings" class="tile">
             <h3 class="tile__title">earings</h3>
             <span class="tile__descr">shop earings</span>
           </a>
-          <a id="for-him" href="#" class="tile">
-            <h3 class="tile__title">for him</h3>
+          <a id="for-him" href="#store/braceletes" class="tile">
+            <h3 class="tile__title">Bracletes</h3>
             <span class="tile__descr">shop now</span>
           </a>
-          <a id="accesories" href="#" class="tile">
-            <h3 class="tile__title">accesories</h3>
-            <span class="tile__descr">shop now</span>
+          <a id="accesories" href="#store/all" class="tile">
+            <h3 class="tile__title">Jewerly</h3>
+            <span class="tile__descr">See all</span>
           </a>
       </div>
       <div class="rings">
@@ -43,7 +43,9 @@ export class Tiles extends AppComponent {
             <span class="rings__descr">CHOOSE YOUR DESIGN, 
               YOUR GEMS, YOUR METAL, YOUR MESSAGE
             </span>
-            <button class="rings__button">Shop All Rings</button>
+            <button class="rings__button">
+              <a href="#store/rings">Shop All Rings</a>
+            </button>
         </div>
       </div>
     </div>

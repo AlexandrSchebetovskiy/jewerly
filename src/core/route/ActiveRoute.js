@@ -1,8 +1,8 @@
 export class ActiveRoute {
   static get path() {
-    return window.location.hash.slice(1)
+    return window.location.hash.slice(1).split('/')[0]
   }
   static get param() {
-    return ActiveRoute.path.split('/')
+    return window.location.hash.split('/')[1] || ''
   }
 }

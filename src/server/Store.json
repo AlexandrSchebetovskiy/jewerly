@@ -167,7 +167,7 @@
     "type":"earring"
   },
   {
-    "id": 25,
+    "id": "el25",
     "name": "Lite Diamons",
     "price": 550.00,
     "img": "img/store/product-25.jpg",
@@ -188,7 +188,7 @@
     "type":"earring"
   },
   {
-    "id": 28,
+    "id": "el28",
     "name": "Sea Pearl",
     "price": 550.00,
     "img": "img/store/product-28.jpg",

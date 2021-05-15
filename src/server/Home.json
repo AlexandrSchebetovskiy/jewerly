@@ -1,28 +1,32 @@
 {
   "bestsellers":[
     {
-      "id": 1,
-      "name": "Golden Earing",
-      "price": 338.00,
-      "img": "img/cards/product-23.png"
-    },
-    {
-      "id": 1,
-      "name": "Silver Earing",
-      "price": 135.00,
-      "img": "img/cards/product-24.png"
-    },
-    {
-      "id": 1,
-      "name": "Platinum Earing",
-      "price": 456.00,
-      "img": "img/cards/product-27.png"
-    },
-    {
-      "id": 1,
-      "name": "Golden Earing with Gem",
+      "id": "el23",
+      "name": "Golden Flower",
       "price": 550.00,
-      "img": "img/cards/product-26.png"
+      "img": "img/cards/product-23.png",
+      "type":"earring"
+    },
+    {
+      "id": "el24",
+      "name": "Platinum earring",
+      "price": 550.00,
+      "img": "img/cards/product-24.png",
+      "type":"earring"
+    },
+    {
+      "id": "el26",
+      "name": "Ruby on Golden rails",
+      "price": 550.00,
+      "img": "img/cards/product-26.png",
+      "type":"earring"
+    },
+    {
+      "id": "el27",
+      "name": "Angels wings",
+      "price": 550.00,
+      "img": "img/cards/product-27.png",
+      "type":"earring"
     }
   ],
   "blog":[
@@ -54,8 +58,5 @@
       "month":"September",
       "text":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, nam sapiente animi itaque culpa, deserunt reprehenderit autem necessitatibus cumque aut quae voluptatem perferendis voluptatum debitis minima optio sed laboriosam ipsum.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, nam sapiente animi itaque culpa, deserunt reprehenderit autem necessitatibus cumque aut quae voluptatem perferendis voluptatum debitis minima optio sed laboriosam ipsum."
     }
-  ],
-  "slider":[
-    {},{},{}
   ]
 }
