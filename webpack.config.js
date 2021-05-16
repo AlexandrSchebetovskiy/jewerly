@@ -35,7 +35,7 @@ module.exports = {
   entry: ['@babel/polyfilL', './index.js'],
   output: {
     filename: filename('js'),
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist')
   },
   resolve: {
     extensions: ['.js', '.scss'],

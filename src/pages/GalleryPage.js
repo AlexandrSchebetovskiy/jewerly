@@ -6,7 +6,7 @@ import {Footer} from '@/components/footer/Footer'
 import {Gallery} from '@/components/gallery/Gallery'
 
 export class GalleryPage extends Page {
-  static url = 'server/Gallery.json'
+  static url = '/server/gallery'
   constructor(data = {}) {
     super()
     this.data = data

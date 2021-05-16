@@ -21,17 +21,17 @@ export class Contacts extends AppComponent {
       
       <h2 class="form__title">get in touch</h2>
       <form action="/contact" method="POST" name="form" class="form">
-        <input type="text" required name="user-name"
+        <input type="text" required name="name"
         class="form__input" placeholder="Your Name">
-        <input type="text" required name="user-mail"
+        <input type="text" required name="mail"
         class="form__input"  placeholder="Your E-Mail">
-        <input id="subject" type="text" name="user-subj"
+        <input id="subject" type="text" name="subj"
         class="form__input"placeholder="Subject">
 
-        <textarea class="form__input" id="form-msg" name="user-msg"
+        <textarea class="form__input" id="form-msg" name="msg"
         rows="3" resizable="false"placeholder="Message"></textarea>
         
-        <button name="user-submit" type="submit" 
+        <button type="submit" 
         class="form__button">Submit</button>
       </form>
     </div>
