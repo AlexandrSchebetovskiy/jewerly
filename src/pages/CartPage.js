@@ -4,7 +4,7 @@ import {Footer} from '../components/footer/Footer'
 import {Cart} from '../components/cart/Cart'
 import {CartPageComponent} from '@/components/PageComponents/CartPageComponent'
 export class CartPage extends Page {
-  static url = '/server/Store.json'
+  static url = '/server/store'
   constructor(data = {}) {
     super()
     this.data = data

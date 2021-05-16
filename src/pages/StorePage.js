@@ -6,7 +6,8 @@ import {Footer} from '@/components/footer/Footer'
 import {Store} from '@/components/store/Store'
 
 export class StorePage extends Page {
-  static url = 'server/Store.json'
+  static url = '/server/store'
+
   constructor(data = {}, param) {
     super()
     this.data = data

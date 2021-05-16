@@ -11,7 +11,7 @@ import {Instagramm} from '@/components/instagramm/Instagramm'
 import {Footer} from '@/components/footer/Footer'
 
 export class AboutPage extends Page {
-  static url = 'server/About.json'
+  static url = '/server/about'
   constructor(data = {}) {
     super()
     this.data = data
