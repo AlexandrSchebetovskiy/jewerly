@@ -47,7 +47,8 @@ export class Cart extends AppComponent {
         return
       }
       if ($target.is('cart__order')) {
-        createOrderModal()
+        const cart = localStorageUtil.getProducts()
+        createOrderModal(cart)
       }
     }
 }

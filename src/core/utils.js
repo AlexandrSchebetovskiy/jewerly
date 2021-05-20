@@ -1,4 +1,6 @@
 import {$} from '@core/dom'
+import {Modal} from '@/components/modal/Modal'
+import {SuccesModal} from '@/components/modal/SuccesModal'
 export function getMethod(string) {
   return 'on' + capitalize(string)
 }
@@ -45,3 +47,15 @@ export function filterItems(type, root) {
   }
 }
 
+export function createSuccesModal(root, msg) {
+  const $root = $(root)
+
+  const $el = $.create(Modal.tagName, Modal.className)
+  const modal = new SuccesModal($el, msg)
+  $el.html(modal.toHTML())
+  $root.append($el)
+  modal.init()
+  window.onscroll = () => {
+    window.scrollTo(0, 0)
+  }
+}

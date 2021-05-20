@@ -10,7 +10,7 @@ import {Footer} from '@/components/footer/Footer'
 import {HomePageComponent} from '@/components/PageComponents/HomePageComponent'
 
 export class HomePage extends Page {
-  static url = 'server/Home.json'
+  static url = '/server/home'
   constructor(data = {}) {
     super()
     this.data = data

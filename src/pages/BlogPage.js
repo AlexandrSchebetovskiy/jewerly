@@ -4,7 +4,7 @@ import {Header} from '@/components/header/Header'
 import {Footer} from '@/components/footer/Footer'
 import {Blog} from '@/components/blog/Blog'
 export class BlogPage extends Page {
-  static url = 'server/Blog.json'
+  static url = '/server/blog'
   constructor(data = {}) {
     super()
     this.data = data

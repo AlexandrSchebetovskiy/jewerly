@@ -1,4 +1,5 @@
 import {AppComponent} from '@core/AppComponent'
+import {createSuccesModal} from '@core/utils'
 export class Contacts extends AppComponent {
   static className ='contacts'
   static tagName = 'section'
@@ -6,6 +7,7 @@ export class Contacts extends AppComponent {
   constructor($root, options) {
     super($root, {
       name: 'Contacts',
+      listeners: ['submit'],
       ...options
     })
   }
@@ -21,22 +23,51 @@ export class Contacts extends AppComponent {
       
       <h2 class="form__title">get in touch</h2>
       <form action="/contact" method="POST" name="form" class="form">
-        <input type="text" required name="user-name"
+        <input type="text" required name="name"
         class="form__input" placeholder="Your Name">
-        <input type="text" required name="user-mail"
+        <input type="text" required name="mail"
         class="form__input"  placeholder="Your E-Mail">
-        <input id="subject" type="text" name="user-subj"
+        <input id="subject" type="text" name="subj"
         class="form__input"placeholder="Subject">
 
-        <textarea class="form__input" id="form-msg" name="user-msg"
+        <textarea class="form__input" id="form-msg" name="msg"
         rows="3" resizable="false"placeholder="Message"></textarea>
         
-        <button name="user-submit" type="submit" 
+        <button type="submit" 
         class="form__button">Submit</button>
       </form>
     </div>
   </div>
     </div>
     `
+  }
+  async onSubmit(event) {
+    event.preventDefault()
+    const inputs = event.target.querySelectorAll('[name]')
+    // eslint-disable-next-line prefer-const
+    let formData = {}
+    inputs.forEach(i => {
+      formData[i.name] = i.value
+    })
+    console.log(formData)
+    try {
+      const response = await fetch('/contact', {
+        method: 'POST', // или 'PUT'
+        body: JSON.stringify(formData),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      const json = await response.json()
+      if (response.ok) {
+        createSuccesModal('contacts', {
+          succes: true,
+          text: 'Thank you for mesage! We reply you as soon as it possible!'
+        })
+      }
+      console.log('Успех:', JSON.stringify(json));
+    } catch (error) {
+      console.error('Ошибка:', error);
+    }
   }
 }

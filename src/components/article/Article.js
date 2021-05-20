@@ -16,7 +16,9 @@ export class Article extends AppComponent {
   toHTML() {
     return `
     <div class="container">
-     ${getArticleTemplate(this.data, this.param)}
+      <div class="article">
+        ${getArticleTemplate(this.data, this.param)}
+      </div>
     </div>
 
     `

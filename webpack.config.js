@@ -27,15 +27,15 @@ const jsLoaders = () => {
   }
 
   return loaders
-};
-
+}
+const distPath = path.join(__dirname, '..', 'jewerly-server', 'public')
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   mode: 'development',
   entry: ['@babel/polyfilL', './index.js'],
   output: {
     filename: filename('js'),
-    path: path.resolve(__dirname, 'dist'),
+    path: distPath,
   },
   resolve: {
     extensions: ['.js', '.scss'],
@@ -63,11 +63,11 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {from: path.resolve(__dirname, 'src/favicon.ico'),
-          to: path.resolve(__dirname, 'dist')},
+          to: path.resolve(distPath)},
         {from: path.resolve(__dirname, 'src/img'),
-          to: path.resolve(__dirname, 'dist/img')},
-        {from: path.resolve(__dirname, 'src/server'),
-          to: path.resolve(__dirname, 'dist/server')}
+          to: path.resolve(distPath, 'img')},
+        // {from: path.resolve(__dirname, 'src/server'),
+        //   to: path.resolve(__dirname, 'dist/server')}
       ]
     }),
     new MiniCssExtractPlugin({

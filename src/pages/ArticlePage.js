@@ -5,7 +5,7 @@ import {Article} from '@/components/article/Article'
 // eslint-disable-next-line max-len
 import {ArticlePageComponent} from '@/components/PageComponents/ArticlePageComponent'
 export class ArticlePage extends Page {
-  static url = 'server/Blog.json'
+  static url = '/server/blog'
   constructor(data = {}, param) {
     super()
     this.data = data
