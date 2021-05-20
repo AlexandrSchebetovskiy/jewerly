@@ -46,20 +46,8 @@ export class OrderModal extends Modal {
       this.$root.delete()
       window.onscroll = () =>{}
     }
-    if ($target.is('form__button')) {
-      console.log(this.data)
-      // eslint-disable-next-line prefer-const
-      let dataCart = []
-      this.data.forEach(i => {
-        const item = {id: i.id, name: i.name, count: i.count}
-        dataCart.push(item)
-      })
-      const formElement = document.querySelector('form');
-      const FD = new FormData(formElement)
-      console.log(FD);
-      const dataOrder = {}
-    }
   }
+
   async onSubmit(event) {
     event.preventDefault()
     console.log(event.target)
@@ -76,12 +64,19 @@ export class OrderModal extends Modal {
       formData[i.name] = i.value
     })
     const postData = {...formData, dataCart}
-    const res = await fetch('/order', {
-      method: 'POST',
-      body: postData
-    })
-    const resData = await res.json()
-    console.log(resData)
-    alert(resData)
+    try {
+      const response = await fetch('/order', {
+        method: 'POST', // или 'PUT'
+        body: JSON.stringify(postData),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      const json = await response.json();
+      console.log('Успех:', JSON.stringify(json))
+    } catch (error) {
+      console.error('Ошибка:', error);
+    }
   }
 }
+

@@ -39,12 +39,18 @@ export class GetCardModal extends Modal {
       formData[i.name] = i.value
     })
     console.log(formData)
-    const res = await fetch('/getcard', {
-      method: 'POST',
-      body: formData
-    })
-    const resData = await res.json()
-    console.log(resData)
-    alert(resData)
+    try {
+      const response = await fetch('/getcard', {
+        method: 'POST', // или 'PUT'
+        body: JSON.stringify(formData),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      const json = await response.json();
+      console.log('Успех:', JSON.stringify(json));
+    } catch (error) {
+      console.error('Ошибка:', error);
+    }
   }
 }

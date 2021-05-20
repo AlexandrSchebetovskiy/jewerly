@@ -1,4 +1,5 @@
 import {AppComponent} from '@core/AppComponent'
+import {createSuccesModal} from '@core/utils'
 export class Contacts extends AppComponent {
   static className ='contacts'
   static tagName = 'section'
@@ -49,12 +50,24 @@ export class Contacts extends AppComponent {
       formData[i.name] = i.value
     })
     console.log(formData)
-    const res = await fetch('/contact', {
-      method: 'POST',
-      body: formData
-    })
-    const resData = await res.json()
-    console.log(resData)
-    alert(resData)
+    try {
+      const response = await fetch('/contact', {
+        method: 'POST', // или 'PUT'
+        body: JSON.stringify(formData),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      const json = await response.json()
+      if (response.ok) {
+        createSuccesModal('contacts', {
+          succes: true,
+          text: 'Thank you for mesage! We reply you as soon as it possible!'
+        })
+      }
+      console.log('Успех:', JSON.stringify(json));
+    } catch (error) {
+      console.error('Ошибка:', error);
+    }
   }
 }
